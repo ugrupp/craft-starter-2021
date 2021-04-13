@@ -1,0 +1,27 @@
+{
+  "name": "craft-starter-2021",
+  "version": "1.0.0",
+  "description": "Craft CMS Starter 2021 by 21sieben.de",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "vite",
+    "build": "cross-env NODE_ENV=production vite build",
+    "serve": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Urs Grupp, 21sieben",
+    "email": "urs@21sieben.de",
+    "url": "https://www.21sieben.de"
+  },
+  "browser": "/web/index.php",
+  "private": true,
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "cross-env": "^7.0.3",
+    "postcss": "^8.2.10",
+    "tailwindcss": "^2.1.1",
+    "vite": "^2.1.5",
+    "vite-plugin-full-reload": "^0.2.1"
+  }
+}

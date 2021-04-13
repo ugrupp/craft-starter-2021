@@ -8,14 +8,14 @@
   },
   "autoload": {
     "psr-4": {
-      "modules\\": "modules/"
+      "modules\\vitepackmodule\\": "modules/vitepackmodule/src/"
     }
   },
   "config": {
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "7.2.5"
+      "php": "7.4"
     }
   },
   "scripts": {
