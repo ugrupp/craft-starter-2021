@@ -7,33 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
     <meta name="referrer" content="origin-when-cross-origin"/>
 
-    {# Asset includes #}
-    {% set env = getenv('ENVIRONMENT') %}
-    {% set baseUrl = siteUrl|trim('/', 'right') %}
+    {# JS & CSS imports #}
+    {% embed "_components/asset" with {
+      options: {
+        src: 'assets/js/main.ts',
+      }
+    } %}
+      {% block outputDev %}
+        <script type="module" src="{{ baseUrl }}/@vite/client"></script>
+        <script type="module" src="{{ baseUrl }}/{{ options.src }}"></script>
+      {% endblock %}
 
-    {# Development #}
-    {% if env == 'dev' %}
-      <script type="module" src="{{ baseUrl }}:2170/@vite/client"></script>
-      <script type="module" src="{{ baseUrl }}:2170/assets/js/main.ts"></script>
+      {% block outputProd %}
+        {# JS #}
+        <script src="{{ baseUrl }}/{{ asset.file }}" defer></script>
 
-    {# Production #}
-    {% else %}
-      {% set manifest = '/dist/manifest.json' %}
-      {% set assets = manifest | readManifest('assets/js/main.ts') %}
-
-      {% for css in assets.css %}
-        <link rel="stylesheet" href="{{ baseUrl }}/dist/{{ css }}">
-      {% endfor %}
-
-      {% for js in assets.js %}
-        <script src="{{ baseUrl }}/dist/{{ js }}" defer></script>
-      {% endfor %}
-    {% endif %}
+        {# CSS #}
+        {% for css in asset.css %}
+          <link rel="stylesheet" href="{{ baseUrl }}/{{ css }}">
+        {% endfor %}
+      {% endblock %}
+    {% endembed %}
   </head>
   <body class="ltr">
     <div class="container">
       <div id="modal">
         <div id="main">
+
+          {# Image asset #}
+          {% include "_components/asset-image" with {
+            options: {
+              src: 'assets/img/static/sparkles-bg.png',
+            }
+          } %}
+
+          {% include "_components/asset-image" with {
+            options: {
+              src: 'assets/img/static/logo-default.svg',
+            }
+          } %}
+
           <div class="content font-bold">
             <h1>Welcome</h1>
             <p>Thanks for installing Craft CMS!</p>

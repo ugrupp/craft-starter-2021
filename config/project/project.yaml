@@ -1,8 +1,13 @@
-dateModified: 1618341143
+dateModified: 1618412451
 email:
   fromEmail: urs@21sieben.de
   fromName: 'Craft Starter 2021'
   transportType: craft\mail\transportadapters\Sendmail
+plugins:
+  dumper:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 system:
   edition: solo
   live: true

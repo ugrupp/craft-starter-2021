@@ -54,41 +54,6 @@ class VitepackModuleTwigExtension extends AbstractExtension
     public function readManifest($path = null, $entry = "index.html")
     {
         // Get manifest and json_decode it
-        $assetsManifest = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT'] . $path), true) ?: [];
-        $file = $assetsManifest[$entry];
-
-        // Initalise output arrays
-        $output["css"] = [];
-        $output["js"] = [];
-        $output["assets"] = [];
-
-        // Build CSS array
-        if (array_key_exists("css", $file)) {
-            if (is_array($file["css"])) {
-                $output["css"] = $file["css"];
-            } else {
-                array_push($output["css"], $file["css"]);
-            }
-        }
-
-        // Build JS array
-        if (array_key_exists("file", $file)) {
-            if (is_array($file["file"])) {
-                $output["js"] = $file["file"];
-            } else {
-                array_push($output["js"], $file["file"]);
-            }
-        }
-
-        // Build assets array
-        if (array_key_exists("assets", $file)) {
-            if (is_array($file["assets"])) {
-                $output["assets"] = $file["assets"];
-            } else {
-                array_push($output["assets"], $file["assets"]);
-            }
-        }
-
-        return $output;
+        return json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT'] . $path), true) ?: [];
     }
 }
