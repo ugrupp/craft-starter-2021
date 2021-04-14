@@ -11,7 +11,8 @@ import "vite/dynamic-import-polyfill";
 import "../css/main.css";
 
 // Static images entry
-const modules = import.meta.glob("../img/static/**/*");
-console.log(modules);
+// @ts-ignore
+const staticAssets = import.meta.glob("../img/static/**/*");
+staticAssets.forEach(() => {}); // noop
 
 // Modules

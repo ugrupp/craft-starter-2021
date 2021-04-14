@@ -34,13 +34,21 @@
       <div id="modal">
         <div id="main">
 
-          {# Image asset #}
+          {# Image asset (png) #}
           {% include "_components/asset-image" with {
             options: {
               src: 'assets/img/static/sparkles-bg.png',
             }
           } %}
 
+          {# Unoptimized asset #}
+          {% include "_components/asset-image" with {
+            options: {
+              src: 'assets/img/static/Bild.jpeg',
+            }
+          } %}
+
+          {# Image asset (svg) #}
           {% include "_components/asset-image" with {
             options: {
               src: 'assets/img/static/logo-default.svg',
