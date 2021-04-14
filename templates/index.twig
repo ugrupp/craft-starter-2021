@@ -14,12 +14,12 @@
     {# Development #}
     {% if env == 'dev' %}
       <script type="module" src="{{ baseUrl }}:2170/@vite/client"></script>
-      <script type="module" src="{{ baseUrl }}:2170/assets/js/main.js"></script>
+      <script type="module" src="{{ baseUrl }}:2170/assets/js/main.ts"></script>
 
     {# Production #}
     {% else %}
       {% set manifest = '/dist/manifest.json' %}
-      {% set assets = manifest | readManifest('assets/js/main.js') %}
+      {% set assets = manifest | readManifest('assets/js/main.ts') %}
 
       {% for css in assets.css %}
         <link rel="stylesheet" href="{{ baseUrl }}/dist/{{ css }}">

@@ -17,11 +17,13 @@
   "browser": "/web/index.php",
   "private": true,
   "devDependencies": {
+    "@types/node": "^14.14.37",
     "autoprefixer": "^10.2.5",
     "cross-env": "^7.0.3",
     "postcss": "^8.2.10",
     "tailwindcss": "^2.1.1",
     "vite": "^2.1.5",
-    "vite-plugin-full-reload": "^0.2.1"
+    "vite-plugin-full-reload": "^0.2.1",
+    "vite-plugin-svg-icons": "^0.4.1"
   }
 }
