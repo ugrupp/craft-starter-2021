@@ -1,13 +1,14 @@
+import legacy from "@vitejs/plugin-legacy";
 import path from "path";
 import { ConfigEnv, UserConfig } from "vite";
 import FullReload from "vite-plugin-full-reload";
-import viteSvgIcons from "vite-plugin-svg-icons";
 import viteImagemin from "vite-plugin-imagemin";
+import viteSvgIcons from "vite-plugin-svg-icons";
 
-const config: (configEnv: ConfigEnv) => UserConfig = () => ({
-  publicDir: "fake_dir_so_nothing_gets_copied",
+const config: (configEnv: ConfigEnv) => UserConfig = ({ command }) => ({
+  base: command === "serve" ? "" : "/dist/",
   build: {
-    outDir: "web/dist",
+    outDir: "./web/dist",
     emptyOutDir: true,
 
     // generate manifest.json in outDir
@@ -15,18 +16,18 @@ const config: (configEnv: ConfigEnv) => UserConfig = () => ({
 
     rollupOptions: {
       // overwrite default .html entry point
-      input: "assets/js/main.ts",
+      input: "/assets/js/main.ts",
     },
   },
   server: {
     host: "craft-starter-2021.nitro",
     port: 2170,
     strictPort: true,
-    watch: {
-      ignored: ["**/storage/**"],
-    },
   },
   plugins: [
+    legacy({
+      targets: ["defaults", "not IE 11"],
+    }),
     FullReload(["templates/**/*"]),
     viteSvgIcons({
       // Specify the icon folder to be cached

@@ -1,6 +1,7 @@
 {
   "require": {
     "craftcms/cms": "^3.6.4",
+    "nystudio107/craft-vite": "^1.0",
     "studioespresso/craft-dumper": "^2.0",
     "vlucas/phpdotenv": "^3.4.0"
   },

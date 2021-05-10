@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0f3fe27914d13947c0df0fcb1ad381cb",
+    "content-hash": "290b8d799ce68dab1aaa3fd52f20373e",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1991,6 +1991,110 @@
                 "source": "https://github.com/mikehaertl/php-shellcommand/tree/1.6.4"
             },
             "time": "2021-03-17T06:54:33+00:00"
+        },
+        {
+            "name": "nystudio107/craft-plugin-vite",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nystudio107/craft-plugin-vite.git",
+                "reference": "6f762917c7de4311507593344b4264939bff2366"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nystudio107/craft-plugin-vite/zipball/6f762917c7de4311507593344b4264939bff2366",
+                "reference": "6f762917c7de4311507593344b4264939bff2366",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "nystudio107\\pluginvite\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "nystudio107",
+                    "homepage": "https://nystudio107.com"
+                }
+            ],
+            "description": "Plugin Vite is the conduit between Craft CMS plugins and Vite, with manifest.json & HMR support",
+            "keywords": [
+                "craftcms",
+                "plugin",
+                "vite"
+            ],
+            "support": {
+                "docs": "https://github.com/nystudio107/craft-plugin-vite/blob/v1/README.md",
+                "issues": "https://github.com/nystudio107/craft-plugin-vite/issues",
+                "source": "https://github.com/nystudio107/craft-plugin-vite/tree/1.0.3"
+            },
+            "time": "2021-05-08T18:47:20+00:00"
+        },
+        {
+            "name": "nystudio107/craft-vite",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nystudio107/craft-vite.git",
+                "reference": "06db2b2d1d6753d528c8f678126b16d8fa47e8db"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nystudio107/craft-vite/zipball/06db2b2d1d6753d528c8f678126b16d8fa47e8db",
+                "reference": "06db2b2d1d6753d528c8f678126b16d8fa47e8db",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0",
+                "nystudio107/craft-plugin-vite": "^1.0.3"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Vite",
+                "handle": "vite",
+                "developer": "nystudio107",
+                "developerUrl": "https://nystudio107.com",
+                "documentationUrl": "https://github.com/nystudio107/craft-vite/blob/master/README.md",
+                "changelogUrl": "https://raw.githubusercontent.com/nystudio107/craft-vite/master/CHANGELOG.md",
+                "class": "nystudio107\\vite\\Vite"
+            },
+            "autoload": {
+                "psr-4": {
+                    "nystudio107\\vite\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "nystudio107",
+                    "homepage": "https://nystudio107.com"
+                }
+            ],
+            "description": "Allows the use of the Vite.js next generation frontend tooling with Craft CMS",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "vite"
+            ],
+            "support": {
+                "docs": "https://github.com/nystudio107/craft-vite/blob/master/README.md",
+                "issues": "https://github.com/nystudio107/craft-vite/issues",
+                "source": "https://github.com/nystudio107/craft-vite/tree/1.0.4"
+            },
+            "time": "2021-05-08T18:48:32+00:00"
         },
         {
             "name": "opis/closure",
