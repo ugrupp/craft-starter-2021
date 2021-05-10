@@ -18,3 +18,4 @@ if (staticAssets === 123456) {
 }
 
 // Modules
+import "./hero";
