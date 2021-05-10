@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1bbe59236f3377dbf2fd117d5743568e",
+    "content-hash": "9d0e60ce4bba26b675e59be49f425c04",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1438,6 +1438,65 @@
             "time": "2021-03-17T06:54:33+00:00"
         },
         {
+            "name": "nystudio107/craft-emptycoalesce",
+            "version": "1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nystudio107/craft-emptycoalesce.git",
+                "reference": "c9bf20dc23abcac73fdfd748428936d176565c35"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nystudio107/craft-emptycoalesce/zipball/c9bf20dc23abcac73fdfd748428936d176565c35",
+                "reference": "c9bf20dc23abcac73fdfd748428936d176565c35",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Empty Coalesce",
+                "handle": "empty-coalesce",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/nystudio107/craft-emptycoalesce/v1/CHANGELOG.md",
+                "class": "nystudio107\\emptycoalesce\\EmptyCoalesce"
+            },
+            "autoload": {
+                "psr-4": {
+                    "nystudio107\\emptycoalesce\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "nystudio107",
+                    "homepage": "https://nystudio107.com/"
+                }
+            ],
+            "description": "Empty Coalesce adds the ??? operator to Twig that will return the first thing that is defined, not null, and not empty.",
+            "keywords": [
+                "coalesce",
+                "coalescing",
+                "craft-plugin",
+                "craft3",
+                "craftcms",
+                "empty",
+                "operator",
+                "twig"
+            ],
+            "support": {
+                "docs": "https://github.com/nystudio107/craft-emptycoalesce/blob/v1/README.md",
+                "issues": "https://github.com/nystudio107/craft-emptycoalesce/issues",
+                "source": "https://github.com/nystudio107/craft-emptycoalesce/tree/v1"
+            },
+            "time": "2019-05-23T21:58:02+00:00"
+        },
+        {
             "name": "nystudio107/craft-plugin-vite",
             "version": "1.0.3",
             "source": {
@@ -2098,6 +2157,50 @@
                 "promises"
             ],
             "time": "2020-05-12T15:16:56+00:00"
+        },
+        {
+            "name": "sebastianlenz/linkfield",
+            "version": "1.0.25",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastian-lenz/craft-linkfield.git",
+                "reference": "a29f328fe41248e9b1722c52f68e435f53c241d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastian-lenz/craft-linkfield/zipball/a29f328fe41248e9b1722c52f68e435f53c241d3",
+                "reference": "a29f328fe41248e9b1722c52f68e435f53c241d3",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC1",
+                "php": "^7.0 || ^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.5 || ^8.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "handle": "typedlinkfield",
+                "name": "Typed link field",
+                "developer": "Sebastian Lenz",
+                "developerUrl": "https://github.com/sebastian-lenz/"
+            },
+            "autoload": {
+                "psr-4": {
+                    "typedlinkfield\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Craft field type for selecting links",
+            "support": {
+                "issues": "https://github.com/sebastian-lenz/craft-linkfield/issues",
+                "source": "https://github.com/sebastian-lenz/craft-linkfield/tree/1.0.25"
+            },
+            "time": "2021-02-23T20:55:03+00:00"
         },
         {
             "name": "seld/cli-prompt",

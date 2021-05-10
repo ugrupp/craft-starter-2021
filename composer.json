@@ -1,7 +1,9 @@
 {
   "require": {
     "craftcms/cms": "3.6.13",
+    "nystudio107/craft-emptycoalesce": "^1.0",
     "nystudio107/craft-vite": "^1.0",
+    "sebastianlenz/linkfield": "^1.0",
     "studioespresso/craft-dumper": "^2.0",
     "vlucas/phpdotenv": "^3.4.0"
   },
