@@ -1,4 +1,4 @@
-dateModified: 1620642786
+dateModified: 1620658831
 email:
   fromEmail: urs@21sieben.de
   fromName: 'Craft Starter 2021'
@@ -16,7 +16,7 @@ system:
   edition: solo
   live: true
   name: 'Craft Starter 2021'
-  schemaVersion: 3.6.7
+  schemaVersion: 3.6.8
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
