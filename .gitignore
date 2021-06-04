@@ -1,4 +1,5 @@
 /.env
+/.zshenv
 /.idea
 /vendor
 .DS_Store

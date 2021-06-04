@@ -21,8 +21,6 @@ use craft\helpers\App;
 
 return [
     'id' => App::env('APP_ID') ?: 'CraftCMS',
-    'modules' => [
-        'vitepack-module' => \modules\vitepackmodule\VitepackModule::class,
-    ],
-    'bootstrap' => ['vitepack-module'],
+    // 'modules' => [],
+    // 'bootstrap' => [],
 ];

@@ -1,0 +1,29 @@
+{% set defaults = {
+  tag: "div",
+  padding: "px-6",
+  maxW: "max-w-7xl",
+  class: "",
+  attributes: {},
+} %}
+
+{% set options = options is defined ? defaults|merge(options) : defaults %}
+
+{# Create container tag #}
+{% set container = tag(options.tag,
+  {
+    class: [
+      "mx-auto",
+      options.padding,
+      options.maxW,
+      options.class,
+    ]|filter|join(' '),
+  }
+)|attr(options.attributes) %}
+
+{# Content block #}
+{% set content %}
+  {% block content %}{% endblock %}
+{% endset %}
+
+{# Render it #}
+{{ container|append(content)|raw }}

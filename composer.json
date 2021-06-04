@@ -1,10 +1,13 @@
 {
   "require": {
-    "craftcms/cms": "3.6.13",
+    "craftcms/cms": "3.6.16",
+    "deployer/deployer": "^6.8",
+    "ether/seo": "^3.7",
     "nystudio107/craft-emptycoalesce": "^1.0",
-    "nystudio107/craft-vite": "^1.0",
+    "nystudio107/craft-vite": "1.0.7",
     "sebastianlenz/linkfield": "^1.0",
     "studioespresso/craft-dumper": "^2.0",
+    "verbb/expanded-singles": "^1.1",
     "vlucas/phpdotenv": "^3.4.0"
   },
   "require-dev": {
@@ -12,7 +15,7 @@
   },
   "autoload": {
     "psr-4": {
-      "modules\\vitepackmodule\\": "modules/vitepackmodule/src/"
+      "modules\\": "modules/"
     }
   },
   "config": {
