@@ -6,14 +6,12 @@
     "italic",
     "unorderedlist",
     "orderedlist",
+    "line",
     "link",
-    "image",
-    "video"
+    "file"
   ],
-  "plugins": [
-    "fullscreen",
-    "video"
-  ],
+  "formattingHide": ["h1"],
+  "plugins": ["fullscreen", "properties", "inlinestyle"],
   "linkNewTab": true,
   "toolbarFixed": true
 }
