@@ -1,10 +1,3 @@
-{% macro svgSprite(icon, className) %}
-  <svg class="o-icon {{ className }}" role="img" title="SVG: {{ icon }}" aria-label="SVG: {{ icon }}">
-    <use xlink:href="{{ craft.twigpack.getModuleUri("img/svg-sprite/sprite.svg") | replace({':2170': '/dist'}) }}#{{ icon }}"></use>
-  </svg>
-{% endmacro %}
-
-
 {% macro objectFit(image, cover) %}
 {% filter spaceless %}
   {% if image.getHasFocalPoint() %}

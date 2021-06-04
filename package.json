@@ -25,7 +25,7 @@
     "tailwindcss": "^2.1.2",
     "vite": "^2.2.4",
     "vite-plugin-full-reload": "^0.2.2",
-    "vite-plugin-imagemin": "^0.3.2",
-    "vite-plugin-svg-icons": "^0.5.0"
-  }
+    "vite-plugin-imagemin": "^0.3.2"
+  },
+  "dependencies": {}
 }
