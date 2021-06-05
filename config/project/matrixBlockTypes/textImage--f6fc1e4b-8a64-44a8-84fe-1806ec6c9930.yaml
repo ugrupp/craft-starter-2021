@@ -44,7 +44,7 @@ fields:
       previewMode: full
       restrictFiles: '1'
       selectionLabel: 'Bild auswählen'
-      showSiteMenu: false
+      showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       singleUploadLocationSource: 'volume:1441d23a-77fd-4cb1-9e07-7deda2c44aca' # Bilder
