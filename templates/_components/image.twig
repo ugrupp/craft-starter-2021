@@ -3,22 +3,31 @@
   alt: null,
   widths: ['400w', '800w', '1200w', '1920w'],
   transformOptions: {},
-  wrapperClasses: [],
+  lazyload: true,
+  wrapperClasses: ["bg-gray-100"],
   pictureClasses: [],
   imageClasses: [],
+  imageLazyloadClasses: ["lazyload transition duration-500 filter blur-lg"],
 } %}
 
 {% set options = options is defined ? defaults|merge(options) : defaults %}
 
 {% if options.image|length %}
+  {# Create low quality placeholder image #}
+  {% set lqip = options.image.getUrl({ width: 128 }) %}
+
+  {# Set image lazyload classes #}
+  {% set imageLazyloadClasses = options.lazyload ? options.imageLazyloadClasses : [] %}
+  {% set lazyloadedAdd = "" %}
+  {% set lazyloadedRm = "filter blur-lg" %}
+
   {% set isSVG = options.image.extension|lower == 'svg' %}
 
   {% set alt = options.alt ?? options.image.alt ??? null %}
 
-  <div{% if options.wrapperClasses|length %} class="{{ options.wrapperClasses|filter|join(' ') }}"{% endif %}>
+  <div class="overflow-hidden{% if options.wrapperClasses|length %} {{ options.wrapperClasses|filter|join(' ') }}"{% endif %}>
     <picture{% if options.pictureClasses|length %} class="{{ options.pictureClasses|filter|join(' ') }}"{% endif %}>
-
-      {# SVG: no transforms or srcset #}
+      {# SVG: no transforms, srcset or lazyload #}
       {% if isSVG %}
         {{ tag('img', {
           src: options.image.url,
@@ -33,7 +42,15 @@
         {# webp source #}
         {% if craft.app.images.supportsWebP %}
           {% do options.image.setTransform(options.transformOptions|merge({ format: "webp" })) %}
-          <source type="image/webp" srcset="{{ options.image.getSrcset(options.widths) }}">
+          {{ tag('source', {
+            type: "image/webp",
+            srcset: options.lazyload ? lqip : options.image.getSrcset(options.widths),
+            data: options.lazyload
+              ? {
+                srcset: options.image.getSrcset(options.widths),
+              }
+              : null,
+          }) }}
         {% endif %}
 
         {# set transform options, also resetting possible webp transform #}
@@ -42,11 +59,20 @@
         {# Create and render image #}
         {{ tag('img', {
           src: options.image.url,
-          srcset: options.image.getSrcset(options.widths),
+          srcset: options.lazyload ? lqip : options.image.getSrcset(options.widths),
+          data: options.lazyload
+            ? {
+              srcset: options.image.getSrcset(options.widths),
+              lazyloaded: {
+                add: lazyloadedAdd,
+                rm: lazyloadedRm,
+              }
+            }
+            : null,
           width: options.image.width,
           height: options.image.height,
           alt: alt,
-          class: options.imageClasses|filter|join(' ') ??? null,
+          class: imageLazyloadClasses|merge(options.imageClasses)|filter|join(' ') ??? null,
           style: "object-position:#{options.image.focalpoint(true) ??? 'center'}",
         }) }}
       {% endif %}
