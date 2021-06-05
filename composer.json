@@ -1,5 +1,6 @@
 {
   "require": {
+    "am-impact/amcommand": "^3.1",
     "craftcms/cms": "3.6.16",
     "craftcms/redactor": "^2.8",
     "deployer/deployer": "^6.8",

@@ -1,9 +1,88 @@
-dateModified: 1622818542
+dateModified: 1622822155
 email:
   fromEmail: urs@21sieben.de
   fromName: 'Craft Starter 2021'
   transportType: craft\mail\transportadapters\Sendmail
 plugins:
+  command-palette:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+    settings:
+      elementSearchElementTypes:
+        __assoc__:
+          -
+            - asset
+            -
+              __assoc__:
+                -
+                  - elementType
+                  - Asset
+                -
+                  - enabled
+                  - ''
+          -
+            - category
+            -
+              __assoc__:
+                -
+                  - elementType
+                  - Kategorie
+                -
+                  - enabled
+                  - '1'
+          -
+            - entry
+            -
+              __assoc__:
+                -
+                  - elementType
+                  - Eintrag
+                -
+                  - enabled
+                  - '1'
+          -
+            - globalset
+            -
+              __assoc__:
+                -
+                  - elementType
+                  - 'Globaler Satz'
+                -
+                  - enabled
+                  - ''
+          -
+            - matrixblock
+            -
+              __assoc__:
+                -
+                  - elementType
+                  - Matrix-Block
+                -
+                  - enabled
+                  - ''
+          -
+            - tag
+            -
+              __assoc__:
+                -
+                  - elementType
+                  - Schlagwort
+                -
+                  - enabled
+                  - ''
+          -
+            - user
+            -
+              __assoc__:
+                -
+                  - elementType
+                  - Benutzer
+                -
+                  - enabled
+                  - '1'
+      pluginName: ''
+      theme: ''
   dumper:
     edition: standard
     enabled: true

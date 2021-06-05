@@ -1,0 +1,55 @@
+{% set defaults = {
+  image: null,
+  alt: null,
+  widths: ['400w', '800w', '1200w', '1920w'],
+  transformOptions: {},
+  wrapperClasses: [],
+  pictureClasses: [],
+  imageClasses: [],
+} %}
+
+{% set options = options is defined ? defaults|merge(options) : defaults %}
+
+{% if options.image|length %}
+  {% set isSVG = options.image.extension|lower == 'svg' %}
+
+  {% set alt = options.alt ?? options.image.alt ??? null %}
+
+  <div{% if options.wrapperClasses|length %} class="{{ options.wrapperClasses|filter|join(' ') }}"{% endif %}>
+    <picture{% if options.pictureClasses|length %} class="{{ options.pictureClasses|filter|join(' ') }}"{% endif %}>
+
+      {# SVG: no transforms or srcset #}
+      {% if isSVG %}
+        {{ tag('img', {
+          src: options.image.url,
+          width: options.image.width,
+          height: options.image.height,
+          alt: alt,
+          class: options.imageClasses|filter|join(' ') ??? null,
+        }) }}
+
+      {# Image #}
+      {% else %}
+        {# webp source #}
+        {% if craft.app.images.supportsWebP %}
+          {% do options.image.setTransform(options.transformOptions|merge({ format: "webp" })) %}
+          <source type="image/webp" srcset="{{ options.image.getSrcset(options.widths) }}">
+        {% endif %}
+
+        {# set transform options, also resetting possible webp transform #}
+        {% do options.image.setTransform(options.transformOptions) %}
+
+        {# Create and render image #}
+        {{ tag('img', {
+          src: options.image.url,
+          srcset: options.image.getSrcset(options.widths),
+          width: options.image.width,
+          height: options.image.height,
+          alt: alt,
+          class: options.imageClasses|filter|join(' ') ??? null,
+          style: "object-position:#{options.image.focalpoint(true) ??? 'center'}",
+        }) }}
+      {% endif %}
+    </picture>
+  </div>
+{% endif %}

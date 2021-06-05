@@ -1,8 +1,0 @@
-{% macro objectFit(image, cover) %}
-{% filter spaceless %}
-  {% if image.getHasFocalPoint() %}
-    {% set focalpoint = image.focalpoint(true) %}
-    object-position: {{ focalpoint | default('center') }}; font-family: 'object-fit: {{ cover | default('cover') }}; object-position: {{ focalpoint | default('center') }}'
-  {% endif %}
-{% endfilter %}
-{% endmacro %}
