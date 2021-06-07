@@ -15,7 +15,7 @@
 {# Create wrapper tag #}
 {% set wrapper = tag(options.tag,
   {
-    class: options.classes|filter|join(' '),
+    class: ["richtext"]|merge(options.classes)|filter|join(' '),
   }
 )|attr(options.attributes) %}
 

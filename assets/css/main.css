@@ -20,6 +20,8 @@
 /**
  * Custom components.
  */
+@import "./headlines.css";
+@import "./richtext.css";
 
 /**
  * Tailwind's utility classes and any utility classes registered by plugins.
