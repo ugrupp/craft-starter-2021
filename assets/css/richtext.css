@@ -3,7 +3,7 @@
 
 .richtext {
   /* Inline elements */
-  & :is(p, address, ul, ol) {
+  & :is(p, address, ul, ol, blockquote) {
     @apply text-sm sm:text-base;
   }
 
