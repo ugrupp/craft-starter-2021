@@ -25,7 +25,7 @@
 
   {% set alt = options.alt ?? options.image.alt ??? null %}
 
-  <div class="overflow-hidden{% if options.wrapperClasses|length %} {{ options.wrapperClasses|filter|join(' ') }}"{% endif %}>
+  <div class="overflow-hidden{% if options.wrapperClasses|length %} {{ options.wrapperClasses|filter|join(' ') }}{% endif %}">
     <picture{% if options.pictureClasses|length %} class="{{ options.pictureClasses|filter|join(' ') }}"{% endif %}>
       {# SVG: no transforms, srcset or lazyload #}
       {% if isSVG %}
