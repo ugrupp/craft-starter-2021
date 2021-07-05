@@ -1,28 +1,31 @@
-export {};
+import { AlpineMagicProperties } from "./models/alpine-magic-properties";
 
-declare global {
-  interface Window {
-    hero: () => {
-      show: boolean;
-      open: () => void;
-      close: () => void;
-      isOpen: () => boolean;
-    };
-  }
-}
+type Hero = {
+  show: boolean;
+  open: (this: This) => void;
+  close: (this: This) => void;
+  toggle: (this: This) => void;
+  isOpen: (this: This) => boolean;
+};
 
-window.hero = () => ({
-  show: false,
-  open() {
-    this.show = true;
-  },
-  close() {
-    this.show = false;
-  },
-  toggle() {
-    this.show = !this.show;
-  },
-  isOpen() {
-    return this.show === true;
-  },
-});
+type This = Hero & AlpineMagicProperties;
+
+const heroData = function (): Hero {
+  return {
+    show: true,
+    open() {
+      this.show = true;
+    },
+    close() {
+      this.show = false;
+    },
+    toggle() {
+      this.isOpen() ? this.close() : this.open();
+    },
+    isOpen() {
+      return this.show === true;
+    },
+  };
+};
+
+export { heroData };

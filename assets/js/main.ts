@@ -16,4 +16,14 @@ if (staticAssets === 123456) {
 
 // Modules
 import "./lazyload";
-import "./hero";
+import { heroData } from "./hero";
+
+// Alpine JS
+import Alpine from "alpinejs/dist/module.esm";
+
+// @ts-ignore
+window.Alpine = Alpine;
+
+// Add components
+Alpine.data("hero", heroData);
+Alpine.start();
