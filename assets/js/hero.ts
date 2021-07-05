@@ -12,7 +12,7 @@ type This = Hero & AlpineMagicProperties;
 
 const heroData = function (): Hero {
   return {
-    show: true,
+    show: false,
     open() {
       this.show = true;
     },
