@@ -1,15 +1,15 @@
 {
   "require": {
     "am-impact/amcommand": "^3.1",
-    "craftcms/cms": "3.6.16",
+    "craftcms/cms": "3.6.17",
     "craftcms/redactor": "^2.8",
     "deployer/deployer": "^6.8",
-    "ether/seo": "^3.7",
+    "ether/seo": "3.7.4",
     "nystudio107/craft-emptycoalesce": "^1.0",
-    "nystudio107/craft-vite": "1.0.7",
+    "nystudio107/craft-vite": "1.0.11",
     "sebastianlenz/linkfield": "^1.0",
     "studioespresso/craft-dumper": "^2.0",
-    "verbb/expanded-singles": "^1.1",
+    "verbb/expanded-singles": "1.1.4",
     "vlucas/phpdotenv": "^3.4.0"
   },
   "require-dev": {
