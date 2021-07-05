@@ -63,27 +63,33 @@
   }
 
   /* Headlines */
-  & :is(h1, .headline--h1) {
+  & h1,
+  & .headline--h1 {
     @apply headline--h1;
   }
 
-  & :is(h2, .headline--h2) {
+  & h2,
+  & .headline--h2 {
     @apply headline--h2;
   }
 
-  & :is(h3, .headline--h3) {
+  & h3,
+  & .headline--h3 {
     @apply headline--h3;
   }
 
-  & :is(h4, .headline--h4) {
+  & h4,
+  & .headline--h4 {
     @apply headline--h4;
   }
 
-  & :is(h5, .headline--h5) {
+  & h5,
+  & .headline--h5 {
     @apply headline--h5;
   }
 
-  & :is(h6, .headline--h6) {
+  & h6,
+  & .headline--h6 {
     @apply headline--h6;
   }
 
