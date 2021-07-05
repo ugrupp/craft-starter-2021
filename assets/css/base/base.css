@@ -1,0 +1,17 @@
+html,
+body {
+  hyphens: auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+::selection {
+  @apply bg-indigo-600 text-white;
+}
+
+[x-cloak] {
+  display: none !important;
+}
