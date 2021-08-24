@@ -7,7 +7,4 @@ node_modules
 
 /web/dist
 /web/imager
-/web/photos
-/web/pictograms
-/web/files
 /web/user-uploads
