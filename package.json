@@ -17,8 +17,7 @@
   "browser": "/web/index.php",
   "private": true,
   "browserslist": [
-    "defaults",
-    "not IE 11"
+    "defaults and supports es6-module and supports es6-module-dynamic-import, not opera > 0, not samsung > 0, not and_qq > 0"
   ],
   "devDependencies": {
     "@types/node": "^16.7.1",
