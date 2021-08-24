@@ -63,7 +63,10 @@
       {% hook "seo" %}
 
       {# Assets import #}
-      {{ craft.vite.script("/assets/js/main.ts", false) }}
+      {{ craft.vite.script(
+        "/assets/js/main.ts",
+        false,
+      ) }}
     {% endblock %}
   </head>
 

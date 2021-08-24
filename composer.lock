@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6dec015967bdcd1b0ee1871250ee2440",
+    "content-hash": "d972d28ccd0009f7396fd7c82ab8919d",
     "packages": [
         {
             "name": "am-impact/amcommand",
@@ -77,6 +77,62 @@
                 "source": "https://github.com/am-impact/amcommand/tree/craft3"
             },
             "time": "2018-05-30T07:07:23+00:00"
+        },
+        {
+            "name": "born05/craft-csp",
+            "version": "1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/born05/craft-csp.git",
+                "reference": "dcbf943b210b06d14aaddfe4cd90591820bd97b8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/born05/craft-csp/zipball/dcbf943b210b06d14aaddfe4cd90591820bd97b8",
+                "reference": "dcbf943b210b06d14aaddfe4cd90591820bd97b8",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Content Security Policy",
+                "handle": "content-security-policy",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/born05/craft-csp/master/CHANGELOG.md"
+            },
+            "autoload": {
+                "psr-4": {
+                    "born05\\contentsecuritypolicy\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Born05",
+                    "homepage": "https://www.born05.com/"
+                }
+            ],
+            "description": "Content Security Policy (or CSP) generator using nonces.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "content security policy",
+                "craft-plugin",
+                "craftcms",
+                "csp"
+            ],
+            "support": {
+                "docs": "https://github.com/born05/craft-csp/blob/master/README.md",
+                "issues": "https://github.com/born05/craft-csp/issues",
+                "source": "https://github.com/born05/craft-csp/tree/1.3.1"
+            },
+            "time": "2021-01-19T09:52:20+00:00"
         },
         {
             "name": "cebe/markdown",
