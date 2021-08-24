@@ -4,9 +4,11 @@
   widths: ['400w', '800w', '1200w', '1920w'],
   transformOptions: {},
   lazyload: true,
-  wrapperClasses: ["bg-gray-100"],
+  wrapperClasses: [],
+  bgClasses: ["bg-gray-100"],
   pictureClasses: [],
   imageClasses: [],
+  imageAttributes: {},
   imageLazyloadClasses: ["lazyload transition duration-500 filter blur-lg"],
 } %}
 
@@ -22,10 +24,14 @@
   {% set lazyloadedRm = "filter blur-lg" %}
 
   {% set isSVG = options.image.extension|lower == 'svg' %}
+  {% set isPNG = options.image.extension|lower == 'png' %}
+
+  {# No background for png or svg #}
+  {% set bgClasses = isSVG or isPNG ? [] : options.bgClasses %}
 
   {% set alt = options.alt ?? options.image.alt ??? null %}
 
-  <div class="overflow-hidden{% if options.wrapperClasses|length %} {{ options.wrapperClasses|filter|join(' ') }}{% endif %}">
+  <div class="overflow-hidden{% if options.wrapperClasses|length %} {{ options.wrapperClasses|filter|join(' ') }}{% endif %}{% if bgClasses|length %} {{ bgClasses|filter|join(' ') }}{% endif %}">
     <picture{% if options.pictureClasses|length %} class="{{ options.pictureClasses|filter|join(' ') }}"{% endif %}>
       {# SVG: no transforms, srcset or lazyload #}
       {% if isSVG %}
@@ -74,7 +80,7 @@
           alt: alt,
           class: imageLazyloadClasses|merge(options.imageClasses)|filter|join(' ') ??? null,
           style: "object-position:#{options.image.focalpoint(true) ??? 'center'}",
-        }) }}
+        })|attr(options.imageAttributes) }}
       {% endif %}
     </picture>
   </div>
