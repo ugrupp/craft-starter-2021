@@ -6,7 +6,7 @@
 /**
  * Custom base styles.
  */
-/* @import "./base/fonts.css"; */
+@import "./base/fonts.css";
 @import "./base/base.css";
 
 /**

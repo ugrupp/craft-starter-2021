@@ -1,4 +1,3 @@
-import legacy from "@vitejs/plugin-legacy";
 import { ConfigEnv, UserConfig } from "vite";
 import FullReload from "vite-plugin-full-reload";
 
@@ -21,12 +20,7 @@ const config: (configEnv: ConfigEnv) => UserConfig = ({ command }) => ({
     port: 2170,
     strictPort: true,
   },
-  plugins: [
-    legacy({
-      targets: ["defaults", "not IE 11"],
-    }),
-    FullReload(["templates/**/*"]),
-  ],
+  plugins: [FullReload(["templates/**/*"])],
 });
 
 export default config;
