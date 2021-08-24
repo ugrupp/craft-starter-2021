@@ -1,4 +1,4 @@
-dateModified: 1629811297
+dateModified: 1629811626
 email:
   fromEmail: urs@21sieben.de
   fromName: 'Craft Starter 2021'
@@ -124,6 +124,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  knock-knock:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.1.1
   redactor:
     edition: standard
     enabled: true
