@@ -1,8 +1,36 @@
-dateModified: 1629808769
+dateModified: 1629810663
 email:
   fromEmail: urs@21sieben.de
   fromName: 'Craft Starter 2021'
   transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    3d0df712-869a-4931-b61a-83ac6e20daf8: Bild # Bild
+    7ffc34d4-a657-4360-afb7-0a5eb1f677d9: Piktogramme # Piktogramme
+    8be22e7a-0613-46b1-aa0f-32c15c8a8148: 'Public Schema' # Public Schema
+    9acfebe0-1383-4ab9-bf40-0ac39d03686d: Startseite # Startseite
+    48e1d91a-6fad-4fe5-bb84-20098ba9c0fa: Text # Text
+    68b975b2-e7c4-4b24-98ec-e2060e92603d: Alt-Text # Alt-Text
+    069a266b-0c75-40a8-a3b9-8540626e6f6f: SEO # SEO
+    85a97ae5-4306-4d69-9ec4-d31ca91b736f: 'Außenabstand unten' # Außenabstand unten
+    85b32876-7624-416a-9e71-6a74a4cf23fa: Spacing # Spacing
+    88e6a398-3947-40b1-b405-ffcc7032e012: Seite # Seite
+    335a10e2-8b40-46e0-8f05-2a0883f6e52a: 'Craft Starter 2021' # Craft Starter 2021
+    481c6233-0299-44fe-a150-d7432630deab: Seitenbaum # Seitenbaum
+    637f5208-30a9-45a6-a8d5-53e10b7de4cf: 'Craft Starter 2021' # Craft Starter 2021
+    1441d23a-77fd-4cb1-9e07-7deda2c44aca: Bilder # Bilder
+    009214d7-e8e7-4fb1-a036-0c05208d6cac: Startseite # Startseite
+    92340a5e-d8bf-42d8-bef4-0fb91b286e50: Text # Text
+    0338854d-7c8c-49ea-b537-1f39ec5a4c62: Allgemein # Allgemein
+    a2ff65ee-37ac-459a-b8b6-260a51655430: Content-Builder # Content-Builder
+    ae1fa5c6-529a-4ec1-82cc-c3b19c3ed210: 'Außenabstand unten' # Außenabstand unten
+    b0f92189-64a6-4af5-81da-29cb87022b37: Bild # Bild
+    bd0b654e-c321-43b6-a6e4-c1eee7eea226: 'Außenabstand unten' # Außenabstand unten
+    d46bc7c1-9ab9-4f32-81b3-ef71a64dfcce: Dateien # Dateien
+    ed10ed9f-dc78-4161-aad7-4ae6c635479f: Bild # Bild
+    f055d515-2dc7-4d1e-b17b-075689d2d2f3: Bildunterschrift # Bildunterschrift
+    f6fc1e4b-8a64-44a8-84fe-1806ec6c9930: 'Text + Bild' # Text + Bild
+    fac07c15-8566-4efd-baab-35b5d55b1f8e: Text # Text
 plugins:
   command-palette:
     edition: standard
@@ -156,7 +184,7 @@ system:
   edition: solo
   live: true
   name: 'Craft Starter 2021'
-  schemaVersion: 3.6.8
+  schemaVersion: 3.7.7
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
