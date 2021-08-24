@@ -1,0 +1,16 @@
+{% set defaults = {
+  field: null,
+} %}
+
+{% set options = (options ??? false) ? defaults|merge(options) : defaults %}
+
+{% include "_blocks/content-builder/_router" with {
+  options: {
+    blocks: options.field
+      .with([
+        'figure:image',
+        'textImage:image',
+      ])
+      .all(),
+  }
+} %}

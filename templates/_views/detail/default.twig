@@ -12,8 +12,10 @@
   {% block view_article %}
     {# Content builder #}
     {% if entry.contentBuilder ??? false %}
-      {% include "_blocks/content-builder/_router" with {
-        self: entry.contentBuilder,
+      {% include "_blocks/content-builder/_start" with {
+        options: {
+          field: entry.contentBuilder,
+        }
       } %}
     {% endif %}
   {% endblock %}

@@ -7,27 +7,40 @@
  # A `self` variable is expected in this template.
 -#}
 
-{% set prevType = null %}
-{% set nextType = null %}
-{% set blocks = self %}
-{% set groupIndex = 1 %}
-{% set sectionWrapperOpen = false %}
+{% set defaults = {
+  blocks: null,
+} %}
 
-{% for i, block in blocks.all() %}
+{% set options = (options ??? false) ? defaults|merge(options) : defaults %}
 
-  {% set type = (nextType ?: block.type.handle) %}
-  {% set nextType = (not loop.last ? blocks[i+1].type.handle) %}
-  {% set groupIndex = (prevType == type) ? (groupIndex + 1) : 1 %}
+{% if options.blocks %}
+  {% set blocks = options.blocks %}
+  {% set prevType = null %}
+  {% set prevBlock = null %}
+  {% set nextType = null %}
+  {% set nextBlock = null %}
+  {% set groupIndex = 1 %}
 
-  {% include [
-    '_blocks/content-builder/' ~ type|kebab,
-    '_blocks/content-builder/default',
-  ] with {
-    self: block,
-    nextType: nextType,
-    prevType: prevType,
-    groupIndex: groupIndex,
-  } %}
+  {% for i, block in blocks %}
 
-  {% set prevType = type %}
-{% endfor %}
+    {% set type = (nextType ?: block.type.handle) %}
+    {% set nextType = (not loop.last ? blocks[i+1].type.handle) %}
+    {% set nextBlock = (not loop.last ? blocks[i+1]) %}
+    {% set groupIndex = (prevType == type) ? (groupIndex + 1) : 1 %}
+
+    {% include [
+      '_blocks/content-builder/' ~ type|kebab,
+      '_blocks/content-builder/default',
+    ] with {
+      self: block,
+      nextType: nextType,
+      nextBlock: nextBlock,
+      prevType: prevType,
+      prevBlock: prevBlock,
+      groupIndex: groupIndex,
+    } %}
+
+    {% set prevType = type %}
+    {% set prevBlock = block %}
+  {% endfor %}
+{% endif %}

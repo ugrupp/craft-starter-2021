@@ -2,42 +2,15 @@
   id: "",
   tag: "section",
   spacing: null,
+  spacingClasses: [],
   classes: [],
   attributes: {},
 } %}
 
 {% set options = (options ??? false) ? defaults|merge(options) : defaults %}
 
-{# Calculate spacing classes #}
-{% set spacingClasses = [] %}
-{% if options.spacing|length == 2 %}
-  {% set mt = options.spacing[0] %}
-  {% set mb = options.spacing[1] %}
-  {% set utility = {
-    1: "mt",
-    2: "mb",
-  } %}
-  {% set breakpoints = {
-    base: "",
-    sm: "sm:",
-    md: "md:",
-    lg: "lg:",
-    xl: "xl:",
-  } %}
-  {% for spacing in options.spacing %}
-    {% for breakpoint, breakpointUtil in breakpoints %}
-      {% if spacing[breakpoint]|length %}
-        {% set class = "#{breakpoints[breakpoint]}#{utility[loop.parent.loop.index]}-#{spacing[breakpoint]}" %}
-        {% set spacingClasses = spacingClasses|push(class)%}
-      {% endif %}
-    {% endfor %}
-  {% endfor %}
-{% endif %}
-
 {# Default spacing #}
-{% if not spacingClasses|length %}
-  {% set spacingClasses = ["mb-20 sm:mb-24 lg:mb-32"] %}
-{% endif %}
+{% set spacingClasses = options.spacingClasses|length ? options.spacingClasses : ["mb-20 sm:mb-24 lg:mb-32"] %}
 
 {# Create wrapper tag #}
 {% set wrapper = tag(options.tag,

@@ -1,15 +1,20 @@
 {% embed "_components/section" with {
   self: self,
   options: {
-    id: "#{ self.type|kebab }-#{ self.id }"
+    id: "#{ self.type|kebab }-#{ self.id }",
+    spacingClasses: (self.marginBottom ??? false) ? [] : ["mb-0"],
   }
 } only %}
   {% block content %}
-    {% embed "_components/container" with { self: self } only %}
+    {% embed "_components/container" with {
+      self: self
+    } only %}
       {% block content %}
-        <p>Unknown content builder block type:
-          <code>{{ self.type }}</code>
-        </p>
+        <div class="bg-yellow-100 p-4">
+          <p>Unknown content builder block type:
+            <code class="bg-yellow-200">{{ self.type }}</code>
+          </p>
+        </div>
       {% endblock %}
     {% endembed %}
   {% endblock %}

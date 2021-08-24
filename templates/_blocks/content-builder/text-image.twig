@@ -1,7 +1,8 @@
 {% embed "_components/section" with {
   self: self,
   options: {
-    id: "#{ self.type|kebab }-#{ self.id }"
+    id: "#{ self.type|kebab }-#{ self.id }",
+    spacingClasses: self.marginBottom ? [] : ["mb-0"],
   }
 } only %}
   {% block content %}
