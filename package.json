@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "cross-env NODE_ENV=production vite build",
     "serve": "vite preview",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "author": {
     "name": "Urs Grupp, 21sieben",
@@ -20,9 +21,12 @@
     "defaults and supports es6-module and supports es6-module-dynamic-import, not opera > 0, not samsung > 0, not and_qq > 0"
   ],
   "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
     "@types/node": "^16.7.1",
     "autoprefixer": "^10.4.4",
     "cross-env": "^7.0.3",
+    "husky": "^7.0.4",
     "postcss": "^8.4.12",
     "postcss-import": "^14.1.0",
     "postcss-preset-env": "^7.4.3",
