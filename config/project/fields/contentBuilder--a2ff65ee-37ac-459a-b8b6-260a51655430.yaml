@@ -1,3 +1,4 @@
+columnSuffix: null
 contentColumnType: string
 fieldGroup: 0338854d-7c8c-49ea-b537-1f39ec5a4c62 # Allgemein
 handle: contentBuilder
@@ -8,6 +9,7 @@ settings:
   contentTable: '{{%matrixcontent_contentbuilder}}'
   maxBlocks: ''
   minBlocks: ''
+  propagationKeyFormat: null
   propagationMethod: all
 translationKeyFormat: null
 translationMethod: site

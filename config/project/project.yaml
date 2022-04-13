@@ -1,4 +1,4 @@
-dateModified: 1649885844
+dateModified: 1649886137
 email:
   fromEmail: urs@21sieben.de
   fromName: 'Craft Starter 2021'
@@ -25,7 +25,9 @@ meta:
     a2ff65ee-37ac-459a-b8b6-260a51655430: Content-Builder # Content-Builder
     ae1fa5c6-529a-4ec1-82cc-c3b19c3ed210: 'Außenabstand unten' # Außenabstand unten
     b0f92189-64a6-4af5-81da-29cb87022b37: Bild # Bild
+    b871d750-c1fb-4115-b278-83ee951262c6: Abstand # Abstand
     bd0b654e-c321-43b6-a6e4-c1eee7eea226: 'Außenabstand unten' # Außenabstand unten
+    c1f3f862-468b-4a6b-88ca-98bd48f37b53: Abstand # Abstand
     d46bc7c1-9ab9-4f32-81b3-ef71a64dfcce: Dateien # Dateien
     db42c192-6672-4cca-92aa-91bfbc9cec67: Videos # Videos
     ed10ed9f-dc78-4161-aad7-4ae6c635479f: Bild # Bild

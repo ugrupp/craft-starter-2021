@@ -1,0 +1,68 @@
+field: a2ff65ee-37ac-459a-b8b6-260a51655430 # Content-Builder
+fieldLayouts:
+  a9a2ad15-122d-4bdc-8153-e565d6cbe38b:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: c1f3f862-468b-4a6b-88ca-98bd48f37b53 # Abstand
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  c1f3f862-468b-4a6b-88ca-98bd48f37b53: # Abstand
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: spacing
+    instructions: ''
+    name: Abstand
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - SM
+            -
+              - value
+              - sm
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - MD
+            -
+              - value
+              - md
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - LG
+            -
+              - value
+              - lg
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+handle: spacing
+name: Abstand
+sortOrder: 1

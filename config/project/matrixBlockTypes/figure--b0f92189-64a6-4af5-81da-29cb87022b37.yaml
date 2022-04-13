@@ -22,33 +22,11 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-          -
-            fieldUid: ae1fa5c6-529a-4ec1-82cc-c3b19c3ed210 # Außenabstand unten
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
         name: Content
         sortOrder: 1
 fields:
-  ae1fa5c6-529a-4ec1-82cc-c3b19c3ed210: # Außenabstand unten
-    contentColumnType: boolean
-    fieldGroup: null
-    handle: marginBottom
-    instructions: ''
-    name: 'Außenabstand unten'
-    searchable: false
-    settings:
-      default: true
-      offLabel: null
-      onLabel: null
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Lightswitch
   ed10ed9f-dc78-4161-aad7-4ae6c635479f: # Bild
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: image
@@ -84,6 +62,7 @@ fields:
     translationMethod: site
     type: craft\fields\Assets
   f055d515-2dc7-4d1e-b17b-075689d2d2f3: # Bildunterschrift
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: caption
@@ -104,4 +83,4 @@ fields:
     type: craft\fields\PlainText
 handle: figure
 name: Bild
-sortOrder: 1
+sortOrder: 4

@@ -1,0 +1,14 @@
+{% set defaults = {
+  spacing: "md",
+  custom: "",
+} %}
+
+{% set options = (options ??? false) ? defaults|merge(options) : defaults %}
+
+{% set spacing = options.custom ??? {
+  sm: "h-10 sm:h-12 lg:h-16",
+  md: "h-20 sm:h-24 lg:h-32",
+  lg: "h-40 sm:h-48 lg:h-64",
+}[options.spacing] %}
+
+<div class="{{ spacing }}"></div>

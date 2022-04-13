@@ -1,21 +1,16 @@
 {% set defaults = {
   id: "",
   tag: "section",
-  spacing: null,
-  spacingClasses: [],
   classes: [],
   attributes: {},
 } %}
 
 {% set options = (options ??? false) ? defaults|merge(options) : defaults %}
 
-{# Default spacing #}
-{% set spacingClasses = options.spacingClasses|length ? options.spacingClasses : ["mb-20 sm:mb-24 lg:mb-32"] %}
-
 {# Create wrapper tag #}
 {% set wrapper = tag(options.tag,
   {
-    class: options.classes|merge(spacingClasses)|filter|join(' '),
+    class: options.classes|filter|join(" "),
     id: "section-#{ options.id|kebab }"
   }
 )|attr(options.attributes) %}

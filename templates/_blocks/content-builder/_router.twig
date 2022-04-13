@@ -29,8 +29,8 @@
     {% set groupIndex = (prevType == type) ? (groupIndex + 1) : 1 %}
 
     {% include [
-      '_blocks/content-builder/' ~ type|kebab,
-      '_blocks/content-builder/default',
+      "_blocks/content-builder/" ~ type|kebab,
+      "_blocks/content-builder/default",
     ] with {
       self: block,
       nextType: nextType,

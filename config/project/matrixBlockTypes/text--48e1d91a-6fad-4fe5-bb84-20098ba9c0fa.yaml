@@ -13,33 +13,11 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-          -
-            fieldUid: bd0b654e-c321-43b6-a6e4-c1eee7eea226 # Außenabstand unten
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
         name: Content
         sortOrder: 1
 fields:
-  bd0b654e-c321-43b6-a6e4-c1eee7eea226: # Außenabstand unten
-    contentColumnType: boolean
-    fieldGroup: null
-    handle: marginBottom
-    instructions: ''
-    name: 'Außenabstand unten'
-    searchable: false
-    settings:
-      default: true
-      offLabel: null
-      onLabel: null
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Lightswitch
   fac07c15-8566-4efd-baab-35b5d55b1f8e: # Text
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: text
@@ -50,7 +28,6 @@ fields:
       availableTransforms: '*'
       availableVolumes:
         - d46bc7c1-9ab9-4f32-81b3-ef71a64dfcce # Dateien
-      cleanupHtml: true
       columnType: text
       configSelectionMode: choose
       defaultTransform: ''
