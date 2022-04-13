@@ -11,6 +11,7 @@
     "sebastianlenz/linkfield": "^1.0",
     "studioespresso/craft-dumper": "^2.0",
     "verbb/expanded-singles": "1.2.0",
+    "verbb/field-manager": "^2.2",
     "verbb/knock-knock": "1.2.16",
     "vlucas/phpdotenv": "^3.4.0"
   },
