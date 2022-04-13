@@ -9,7 +9,7 @@
  # an element URI. Otherwise an `entry` array is created before invoking a view router.
 -#}
 
-{% extends '_layouts/site' %}
+{% extends "_layouts/site" %}
 
 {# Handle special routes that don’t correspond to Craft entries. #}
 {% if entry is not defined %}
@@ -36,10 +36,10 @@
   {# Set body class #}
   {% set bodyClass = craft.app.request.segments|first %}
 
-{% elseif entry.section.handle ends with 'Index' %}
+{% elseif entry.section.handle ends with "Index" %}
 
   {# Set body class for index pages. #}
-  {% set bodyClass = entry.section.handle|replace({ 'Index': '' }) %}
+  {% set bodyClass = entry.section.handle|replace({ "Index": "" }) %}
 
 {% endif %}
 

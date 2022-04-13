@@ -1,7 +1,7 @@
 {% set defaults = {
   image: null,
   alt: null,
-  widths: ['400w', '800w', '1200w', '1920w'],
+  widths: ["400w", "800w", "1200w", "1920w"],
   transformOptions: {},
   lazyload: true,
   wrapperClasses: [],
@@ -23,24 +23,24 @@
   {% set lazyloadedAdd = "" %}
   {% set lazyloadedRm = "filter blur-lg" %}
 
-  {% set isSVG = options.image.extension|lower == 'svg' %}
-  {% set isPNG = options.image.extension|lower == 'png' %}
+  {% set isSVG = options.image.extension|lower == "svg" %}
+  {% set isPNG = options.image.extension|lower == "png" %}
 
   {# No background for png or svg #}
   {% set bgClasses = isSVG or isPNG ? [] : options.bgClasses %}
 
   {% set alt = options.alt ?? options.image.alt ??? null %}
 
-  <div class="overflow-hidden{% if options.wrapperClasses|length %} {{ options.wrapperClasses|filter|join(' ') }}{% endif %}{% if bgClasses|length %} {{ bgClasses|filter|join(' ') }}{% endif %}">
-    <picture{% if options.pictureClasses|length %} class="{{ options.pictureClasses|filter|join(' ') }}"{% endif %}>
+  <div class="overflow-hidden{% if options.wrapperClasses|length %} {{ options.wrapperClasses|filter|join(" ") }}{% endif %}{% if bgClasses|length %} {{ bgClasses|filter|join(" ") }}{% endif %}">
+    <picture{% if options.pictureClasses|length %} class="{{ options.pictureClasses|filter|join(" ") }}"{% endif %}>
       {# SVG: no transforms, srcset or lazyload #}
       {% if isSVG %}
-        {{ tag('img', {
+        {{ tag("img", {
           src: options.image.url,
           width: options.image.width,
           height: options.image.height,
           alt: alt,
-          class: options.imageClasses|filter|join(' ') ??? null,
+          class: options.imageClasses|filter|join(" ") ??? null,
         }) }}
 
       {# Image #}
@@ -48,7 +48,7 @@
         {# webp source #}
         {% if craft.app.images.supportsWebP %}
           {% do options.image.setTransform(options.transformOptions|merge({ format: "webp" })) %}
-          {{ tag('source', {
+          {{ tag("source", {
             type: "image/webp",
             srcset: options.lazyload ? lqip : options.image.getSrcset(options.widths),
             data: options.lazyload
@@ -63,7 +63,7 @@
         {% do options.image.setTransform(options.transformOptions) %}
 
         {# Create and render image #}
-        {{ tag('img', {
+        {{ tag("img", {
           src: options.image.url,
           srcset: options.lazyload ? lqip : options.image.getSrcset(options.widths),
           data: options.lazyload
@@ -78,8 +78,8 @@
           width: options.image.width,
           height: options.image.height,
           alt: alt,
-          class: imageLazyloadClasses|merge(options.imageClasses)|filter|join(' ') ??? null,
-          style: "object-position:#{options.image.focalpoint(true) ??? 'center'}",
+          class: imageLazyloadClasses|merge(options.imageClasses)|filter|join(" ") ??? null,
+          style: "object-position:#{options.image.focalpoint(true) ??? "center"}",
         })|attr(options.imageAttributes) }}
       {% endif %}
     </picture>

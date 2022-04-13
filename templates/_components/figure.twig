@@ -10,14 +10,14 @@
 
 {# Create wrapper tag #}
 {% set figure = tag("figure", {
-  class: options.classes|filter|join(' '),
+  class: options.classes|filter|join(" "),
 })|attr(options.attributes) %}
 
 {# Content block #}
 {% set content %}
   {% if options.image|length %}
     {# Image #}
-    {% include '_components/image' with {
+    {% include "_components/image" with {
       options: {
         image: options.image,
       },
