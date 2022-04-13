@@ -1,10 +1,5 @@
 module.exports = {
-  mode: "jit",
-  purge: [
-    "./templates/**/*.twig",
-    "./assets/**/*.{js,ts,vue}",
-    "./tailwind-jit-safelist.txt",
-  ],
+  content: ["./templates/**/*.twig", "./assets/**/*.{js,ts,vue}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -12,9 +7,6 @@ module.exports = {
         sans: ["Roboto", "Arial", "sans-serif"],
       },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 };

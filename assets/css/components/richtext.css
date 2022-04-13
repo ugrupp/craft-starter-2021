@@ -65,32 +65,32 @@
   /* Headlines */
   & h1,
   & .headline--h1 {
-    @apply headline--h1;
+    @apply headline--1;
   }
 
   & h2,
   & .headline--h2 {
-    @apply headline--h2;
+    @apply headline--2;
   }
 
   & h3,
   & .headline--h3 {
-    @apply headline--h3;
+    @apply headline--3;
   }
 
   & h4,
   & .headline--h4 {
-    @apply headline--h4;
+    @apply headline--4;
   }
 
   & h5,
   & .headline--h5 {
-    @apply headline--h5;
+    @apply headline--5;
   }
 
   & h6,
   & .headline--h6 {
-    @apply headline--h6;
+    @apply headline--6;
   }
 
   /* Links in headlines */
