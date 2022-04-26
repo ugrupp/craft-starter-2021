@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4a35d315e1e8cf0fa912c7421a3d4188",
+    "content-hash": "6bc90c19dbec0ae376e9cfa4a4a4a474",
     "packages": [
         {
             "name": "am-impact/amcommand",
@@ -230,29 +230,32 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.1.9",
+            "version": "2.3.5",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/e558c88f28d102d497adec4852802c0dc14c7077",
-                "reference": "e558c88f28d102d497adec4852802c0dc14c7077",
+                "url": "https://api.github.com/repos/composer/composer/zipball/50c47b1f907cfcdb8f072b88164d22b527557ae1",
+                "reference": "50c47b1f907cfcdb8f072b88164d22b527557ae1",
                 "shasum": ""
             },
             "require": {
                 "composer/ca-bundle": "^1.0",
                 "composer/metadata-minifier": "^1.0",
+                "composer/pcre": "^2 || ^3",
                 "composer/semver": "^3.0",
                 "composer/spdx-licenses": "^1.2",
-                "composer/xdebug-handler": "^2.0",
+                "composer/xdebug-handler": "^2.0.2 || ^3.0.3",
                 "justinrainbow/json-schema": "^5.2.11",
-                "php": "^5.3.2 || ^7.0 || ^8.0",
-                "psr/log": "^1.0",
-                "react/promise": "^1.2 || ^2.7",
+                "php": "^7.2.5 || ^8.0",
+                "psr/log": "^1.0 || ^2.0 || ^3.0",
+                "react/promise": "^2.8",
                 "seld/jsonlint": "^1.4",
-                "seld/phar-utils": "^1.0",
-                "symfony/console": "^2.8.52 || ^3.4.35 || ^4.4 || ^5.0 || ^6.0",
-                "symfony/filesystem": "^2.8.52 || ^3.4.35 || ^4.4 || ^5.0 || ^6.0",
-                "symfony/finder": "^2.8.52 || ^3.4.35 || ^4.4 || ^5.0 || ^6.0",
-                "symfony/process": "^2.8.52 || ^3.4.35 || ^4.4 || ^5.0 || ^6.0"
+                "seld/phar-utils": "^1.2",
+                "symfony/console": "^5.4.1 || ^6.0",
+                "symfony/filesystem": "^5.4 || ^6.0",
+                "symfony/finder": "^5.4 || ^6.0",
+                "symfony/polyfill-php73": "^1.24",
+                "symfony/polyfill-php80": "^1.24",
+                "symfony/process": "^5.4 || ^6.0"
             },
             "suggest": {
                 "ext-openssl": "Enabling the openssl extension allows you to access https URLs for repositories and packages",
@@ -265,7 +268,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1-dev"
+                    "dev-main": "2.3-dev"
                 }
             },
             "autoload": {
@@ -295,7 +298,7 @@
                 "dependency",
                 "package"
             ],
-            "time": "2021-10-05T07:47:38+00:00"
+            "time": "2022-04-13T14:43:00+00:00"
         },
         {
             "name": "composer/metadata-minifier",
@@ -339,20 +342,20 @@
         },
         {
             "name": "composer/pcre",
-            "version": "1.0.1",
+            "version": "3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/pcre/zipball/67a32d7d6f9f560b726ab25a061b38ff3a80c560",
-                "reference": "67a32d7d6f9f560b726ab25a061b38ff3a80c560",
+                "url": "https://api.github.com/repos/composer/pcre/zipball/e300eb6c535192decd27a85bc72a9290f0d6b3bd",
+                "reference": "e300eb6c535192decd27a85bc72a9290f0d6b3bd",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.3.2 || ^7.0 || ^8.0"
+                "php": "^7.4 || ^8.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.x-dev"
+                    "dev-main": "3.x-dev"
                 }
             },
             "autoload": {
@@ -377,7 +380,7 @@
                 "regex",
                 "regular expression"
             ],
-            "time": "2022-01-21T20:24:37+00:00"
+            "time": "2022-02-25T20:21:48+00:00"
         },
         {
             "name": "composer/semver",
@@ -484,16 +487,16 @@
         },
         {
             "name": "composer/xdebug-handler",
-            "version": "2.0.5",
+            "version": "3.0.3",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/9e36aeed4616366d2b690bdce11f71e9178c579a",
-                "reference": "9e36aeed4616366d2b690bdce11f71e9178c579a",
+                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/ced299686f41dce890debac69273b47ffe98a40c",
+                "reference": "ced299686f41dce890debac69273b47ffe98a40c",
                 "shasum": ""
             },
             "require": {
-                "composer/pcre": "^1",
-                "php": "^5.3.2 || ^7.0 || ^8.0",
+                "composer/pcre": "^1 || ^2 || ^3",
+                "php": "^7.2.5 || ^8.0",
                 "psr/log": "^1 || ^2 || ^3"
             },
             "type": "library",
@@ -516,19 +519,19 @@
                 "Xdebug",
                 "performance"
             ],
-            "time": "2022-02-24T20:20:32+00:00"
+            "time": "2022-02-25T21:32:43+00:00"
         },
         {
             "name": "craftcms/cms",
-            "version": "3.7.38",
+            "version": "3.7.39",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/7e5b2ee7be865ec223c8e0923f41b17c21f07766",
-                "reference": "7e5b2ee7be865ec223c8e0923f41b17c21f07766",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/56c6717a0f1bda48e6863b3e0ea0c03913857800",
+                "reference": "56c6717a0f1bda48e6863b3e0ea0c03913857800",
                 "shasum": ""
             },
             "require": {
-                "composer/composer": "2.1.9",
+                "composer/composer": "2.3.5",
                 "craftcms/oauth2-craftid": "~1.0.0",
                 "craftcms/plugin-installer": "~1.5.6",
                 "craftcms/server-check": "~1.2.0",
@@ -607,7 +610,7 @@
                 "docs": "https://craftcms.com/docs/3.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2022-04-06T18:24:35+00:00"
+            "time": "2022-04-26T17:15:53+00:00"
         },
         {
             "name": "craftcms/html-field",
@@ -724,11 +727,11 @@
         },
         {
             "name": "craftcms/redactor",
-            "version": "2.10.6",
+            "version": "2.10.7",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/redactor/zipball/3ae12028303dc5ef95ccdd6b47a9307510080011",
-                "reference": "3ae12028303dc5ef95ccdd6b47a9307510080011",
+                "url": "https://api.github.com/repos/craftcms/redactor/zipball/cd61d04644b0c03e69314a442f7a5f63793ea85e",
+                "reference": "cd61d04644b0c03e69314a442f7a5f63793ea85e",
                 "shasum": ""
             },
             "require": {
@@ -770,15 +773,15 @@
                 "docs": "https://github.com/craftcms/redactor/blob/v2/README.md",
                 "rss": "https://github.com/craftcms/redactor/commits/v2.atom"
             },
-            "time": "2022-04-07T23:15:08+00:00"
+            "time": "2022-04-26T17:54:41+00:00"
         },
         {
             "name": "craftcms/server-check",
-            "version": "1.2.3",
+            "version": "1.2.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/server-check/zipball/9d8345bc7920b6657bd3fac396efee6bf8609ed6",
-                "reference": "9d8345bc7920b6657bd3fac396efee6bf8609ed6",
+                "url": "https://api.github.com/repos/craftcms/server-check/zipball/04518e63ae94effd4e352838278662c928c84e8c",
+                "reference": "04518e63ae94effd4e352838278662c928c84e8c",
                 "shasum": ""
             },
             "type": "library",
@@ -798,7 +801,7 @@
                 "requirements",
                 "yii2"
             ],
-            "time": "2021-08-18T14:46:23+00:00"
+            "time": "2022-04-17T02:10:54+00:00"
         },
         {
             "name": "creocoder/yii2-nested-sets",
@@ -1482,11 +1485,11 @@
         },
         {
             "name": "justinrainbow/json-schema",
-            "version": "5.2.11",
+            "version": "5.2.12",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/2ab6744b7296ded80f8cc4f9509abbff393399aa",
-                "reference": "2ab6744b7296ded80f8cc4f9509abbff393399aa",
+                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/ad87d5a5ca981228e0e205c2bc7dfb8e24559b60",
+                "reference": "ad87d5a5ca981228e0e205c2bc7dfb8e24559b60",
                 "shasum": ""
             },
             "require": {
@@ -1533,7 +1536,7 @@
                 "json",
                 "schema"
             ],
-            "time": "2021-07-22T09:24:00+00:00"
+            "time": "2022-04-13T08:02:27+00:00"
         },
         {
             "name": "laminas/laminas-escaper",
@@ -1762,11 +1765,11 @@
         },
         {
             "name": "league/mime-type-detection",
-            "version": "1.10.0",
+            "version": "1.11.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/3e4a35d756eedc67096f30240a68a3149120dae7",
-                "reference": "3e4a35d756eedc67096f30240a68a3149120dae7",
+                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/ff6248ea87a9f116e78edd6002e39e5128a0d4dd",
+                "reference": "ff6248ea87a9f116e78edd6002e39e5128a0d4dd",
                 "shasum": ""
             },
             "require": {
@@ -1789,7 +1792,7 @@
                 }
             ],
             "description": "Mime-type detection for Flysystem",
-            "time": "2022-04-11T12:49:04+00:00"
+            "time": "2022-04-17T13:12:02+00:00"
         },
         {
             "name": "league/oauth2-client",
@@ -4744,11 +4747,11 @@
         },
         {
             "name": "webonyx/graphql-php",
-            "version": "v14.11.5",
+            "version": "v14.11.6",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/ffa431c0821821839370a68dab3c2597c06bf7f0",
-                "reference": "ffa431c0821821839370a68dab3c2597c06bf7f0",
+                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/6070542725b61fc7d0654a8a9855303e5e157434",
+                "reference": "6070542725b61fc7d0654a8a9855303e5e157434",
                 "shasum": ""
             },
             "require": {
@@ -4775,7 +4778,7 @@
                 "api",
                 "graphql"
             ],
-            "time": "2022-01-24T11:13:31+00:00"
+            "time": "2022-04-13T16:25:32+00:00"
         },
         {
             "name": "yiisoft/yii2",
@@ -5306,5 +5309,5 @@
     "platform-overrides": {
         "php": "7.4"
     },
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.1.0"
 }
