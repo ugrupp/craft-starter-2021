@@ -23,19 +23,19 @@
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
-    "@types/node": "^16.7.1",
-    "autoprefixer": "^10.4.4",
+    "@types/node": "^17.0.29",
+    "autoprefixer": "^10.4.5",
     "cross-env": "^7.0.3",
     "husky": "^7.0.4",
     "postcss": "^8.4.12",
     "postcss-import": "^14.1.0",
-    "postcss-preset-env": "^7.4.3",
+    "postcss-preset-env": "^7.4.4",
     "tailwindcss": "^3.0.24",
-    "vite": "^2.9.4",
-    "vite-plugin-full-reload": "^0.2.2"
+    "vite": "^2.9.6",
+    "vite-plugin-full-reload": "^1.0.0"
   },
   "dependencies": {
-    "alpinejs": "^3.2.4",
+    "alpinejs": "^3.10.2",
     "lazysizes": "^5.3.2"
   }
 }
